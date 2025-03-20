@@ -3,7 +3,7 @@
  * @Date: 2022-06-22 11:51:58
  * @LastEditTime: 2022-06-23 11:31:28
  * @LastEditors: your name
- * @Description: 
+ * @Description:
  * @FilePath: /lowcode-collection/cms-lowcode-engine/cms-lowcode-engine-client/config/config.ts
  */
 import { defineConfig } from '@umijs/max';
@@ -22,25 +22,28 @@ export default defineConfig({
   proxy,
   npmClient: 'pnpm',
   externals: {
-    'react': 'var window.React',
+    react: 'var window.React',
     'react-dom': 'var window.ReactDOM',
     'prop-types': 'var window.PropTypes',
     '@alifd/next': 'var window.Next',
     '@alilc/lowcode-engine': 'var window.AliLowCodeEngine',
-    '@alilc/lowcode-editor-core': 'var window.AliLowCodeEngine.common.editorCabin',
-    '@alilc/lowcode-editor-skeleton': 'var window.AliLowCodeEngine.common.skeletonCabin',
-    '@alilc/lowcode-designer': 'var window.AliLowCodeEngine.common.designerCabin',
+    '@alilc/lowcode-editor-core':
+      'var window.AliLowCodeEngine.common.editorCabin',
+    '@alilc/lowcode-editor-skeleton':
+      'var window.AliLowCodeEngine.common.skeletonCabin',
+    '@alilc/lowcode-designer':
+      'var window.AliLowCodeEngine.common.designerCabin',
     '@alilc/lowcode-engine-ext': 'var window.AliLowCodeEngineExt',
     '@ali/lowcode-engine': 'var window.AliLowCodeEngine',
-    'moment': 'var window.moment',
-    'lodash': 'var window._',
+    moment: 'var window.moment',
+    lodash: 'var window._',
   },
   title: 'CMS lowcode-engine',
   styles: [
     'https://alifd.alicdn.com/npm/@alilc/lowcode-engine@latest/dist/css/engine-core.css',
     'https://g.alicdn.com/code/lib/alifd__next/1.23.24/next.min.css',
     'https://alifd.alicdn.com/npm/@alifd/theme-lowcode-light/0.2.0/next.min.css',
-    'https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@latest/dist/css/engine-ext.css'
+    'https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@latest/dist/css/engine-ext.css',
   ],
   scripts: [
     {
@@ -78,6 +81,6 @@ export default defineConfig({
     {
       src: 'https://alifd.alicdn.com/npm/@alilc/lowcode-engine-ext@latest/dist/js/engine-ext.js',
       defer: false,
-    }
-  ]
+    },
+  ],
 });
